@@ -1,5 +1,14 @@
 # @kumikojs/tsconfig-experimental
 
+## 0.0.2
+
+### Patch Changes
+
+- 1f17366: Updated the release workflow to generate dynamic commit messages:
+
+  - Added a step to generate commit messages based on changeset status
+  - Updated the commit and title fields in the release workflow to use the generated commit message
+
 ## 0.0.1
 
 ### Patch Changes
