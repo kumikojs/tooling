@@ -42,12 +42,33 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Generate commit message
+        id: commit-msg
+        run: |
+          # Extraire les infos des packages avec pnpm ls
+          PACKAGES_INFO=$(pnpm ls -r --json \
+            | jq -r '.[] | select(.private != true) | "\(.name)@\(.version)"' \
+            | tr '\n' ' ' \
+            | sed 's/ $//')
+
+          if [ -n "$PACKAGES_INFO" ]; then
+            echo "message=ci(release): $PACKAGES_INFO" >> $GITHUB_OUTPUT
+          else
+            echo "message=ci(release): version bump" >> $GITHUB_OUTPUT
+          fi
+
+          # Debug
+          echo "Debug - Packages info:"
+          echo "$PACKAGES_INFO"
+          echo "Debug - Final message:"
+          cat $GITHUB_OUTPUT
+
       - name: Create and publish versions
         uses: changesets/action@v1
         with:
           version: pnpm run version-packages
-          commit: "chore: update versions"
-          title: "chore: update versions"
+          commit: ${{ steps.commit-msg.outputs.message }}
+          title: ${{ steps.commit-msg.outputs.message }}
           publish: pnpm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
