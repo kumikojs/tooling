@@ -1,6 +1,6 @@
-# @kumikojs/tsconfig
-
-Shareable TypeScript configurations for KumikoJS projects.
+<div align="center">
+  <img src="https://github.com/kumikojs/.github/blob/main/assets/%40kumikojs/tooling/kumiko-tsconfig.svg?raw=true" alt="KumikoJS TypeScript Configuration"  />
+</div>
 
 ## Installation
 
