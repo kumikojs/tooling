@@ -42,12 +42,25 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Generate commit message
+        id: commit-msg
+        run: |
+          CHANGESET_INFO=$(pnpm changeset status)
+
+          CHANGES=$(echo "$CHANGESET_INFO" | grep -E '🦋  .+@[0-9]+\.[0-9]+\.[0-9]+' | sed 's/🦋  //')
+
+          if [ -n "$CHANGES" ]; then
+            echo "message=chore(release): $CHANGES" >> $GITHUB_OUTPUT
+          else
+            echo "message=chore(release): version packages" >> $GITHUB_OUTPUT
+          fi
+
       - name: Create and publish versions
         uses: changesets/action@v1
         with:
           version: pnpm run version-packages
-          commit: "chore: update versions"
-          title: "chore: update versions"
+          commit: ${{ steps.commit-msg.outputs.message }}
+          title: ${{ steps.commit-msg.outputs.message }}
           publish: pnpm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
