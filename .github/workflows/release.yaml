@@ -1,0 +1,53 @@
+name: Changesets Release
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  version:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - name: Checkout code repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Setup npmrc for publishing
+        run: |
+          cat << EOF > .npmrc
+          //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
+          EOF
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Create and publish versions
+        uses: changesets/action@v1
+        with:
+          version: pnpm run version-packages
+          commit: "chore: update versions"
+          title: "chore: update versions"
+          publish: pnpm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
