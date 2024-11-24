@@ -1,10 +1,10 @@
 {
-  "name": "@kumiko/tooling-monorepo",
+  "name": "@kumikojs/tooling-monorepo",
   "private": true,
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "build": "pnpm run -r --filter='!@kumiko/tsconfig*' build",
+    "build": "pnpm run -r --filter='!@kumikojs/tsconfig*' build",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "changeset publish"

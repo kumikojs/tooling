@@ -1,5 +1,5 @@
 {
-  "name": "@kumiko/tsconfig-experimental",
+  "name": "@kumikojs/tsconfig-experimental",
   "version": "0.0.0",
   "private": false,
   "files": [
