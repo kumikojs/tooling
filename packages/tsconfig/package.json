@@ -1,0 +1,14 @@
+{
+  "name": "@kumiko/tsconfig-experimental",
+  "version": "0.0.0",
+  "private": false,
+  "files": [
+    "base.json",
+    "runtime/*.json",
+    "frameworks/*.json",
+    "presets/*.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Browser Library Configuration",
+  "extends": ["../runtime/browser.json", "./lib-base.json"],
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler"
+  }
+}
