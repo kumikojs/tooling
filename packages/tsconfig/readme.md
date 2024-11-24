@@ -1,6 +1,6 @@
 # @kumikojs/tsconfig
 
-Shareable TypeScript configurations for KumikoJS projects.
+> Shareable TypeScript configurations for KumikoJS projects. These configurations provide consistent and optimized TypeScript settings across different project types and environments.
 
 ## Installation
 
