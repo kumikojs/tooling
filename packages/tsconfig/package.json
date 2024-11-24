@@ -2,6 +2,17 @@
   "name": "@kumikojs/tsconfig-experimental",
   "version": "0.0.2",
   "private": false,
+  "description": "TypeScript configurations for KumikoJS projects",
+  "author": {
+    "name": "Loïk Fekkaï",
+    "email": "loikfekkai@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "tsconfig",
+    "typescript",
+    "kumikojs"
+  ],
   "files": [
     "base.json",
     "runtime/*.json",
@@ -9,6 +20,7 @@
     "presets/*.json"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
