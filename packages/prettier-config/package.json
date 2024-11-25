@@ -1,0 +1,40 @@
+{
+  "name": "@kumikojs/prettier-config-experimental",
+  "version": "0.0.0",
+  "private": false,
+  "description": "Shareable Prettier configurations for KumikoJS projects",
+  "author": {
+    "name": "Loïk Fekkaï",
+    "email": "loikfekkai@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "prettier",
+    "prettier-config",
+    "formatting",
+    "kumikojs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kumikojs/tooling.git",
+    "directory": "packages/prettier-config"
+  },
+  "homepage": "https://github.com/kumikojs/tooling/blob/main/packages/prettier-config/readme.md",
+  "bugs": {
+    "url": "https://github.com/kumikojs/tooling/issues"
+  },
+  "exports": {
+    ".": "./src/base.js",
+    "./base": "./src/base.js"
+  },
+  "peerDependencies": {
+    "prettier": "^3.3.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
