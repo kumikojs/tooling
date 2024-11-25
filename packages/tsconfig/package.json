@@ -13,6 +13,15 @@
     "typescript",
     "kumikojs"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kumikojs/tooling.git",
+    "directory": "packages/tsconfig"
+  },
+  "homepage": "https://github.com/kumikojs/tooling/blob/main/packages/tsconfig/readme.md",
+  "bugs": {
+    "url": "https://github.com/kumikojs/tooling/issues"
+  },
   "files": [
     "base.json",
     "runtime/*.json",
