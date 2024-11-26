@@ -1,6 +1,6 @@
 {
   "name": "@kumikojs/eslint-config-experimental",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": false,
   "description": "Shareable ESLint configurations for KumikoJS projects",
   "type": "module",
