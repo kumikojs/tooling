@@ -20,7 +20,7 @@
     "url": "https://github.com/kumikojs/tooling.git",
     "directory": "packages/eslint-config"
   },
-  "homepage": "https://github.com/kumikojs/tooling/blob/main/packages/eslint-config/readme.md",
+  "homepage": "https://github.com/kumikojs/tooling/blob/main/packages/eslint-config/README.md",
   "bugs": {
     "url": "https://github.com/kumikojs/tooling/issues"
   },
