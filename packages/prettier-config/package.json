@@ -19,7 +19,7 @@
     "url": "https://github.com/kumikojs/tooling.git",
     "directory": "packages/prettier-config"
   },
-  "homepage": "https://github.com/kumikojs/tooling/blob/main/packages/prettier-config/readme.md",
+  "homepage": "https://github.com/kumikojs/tooling/blob/main/packages/prettier-config/README.md",
   "bugs": {
     "url": "https://github.com/kumikojs/tooling/issues"
   },
