@@ -1,0 +1,56 @@
+{
+  "name": "@kumikojs/eslint-config-experimental",
+  "version": "0.0.0",
+  "private": false,
+  "description": "Shareable ESLint configurations for KumikoJS projects",
+  "type": "module",
+  "author": {
+    "name": "Loïk Fekkaï",
+    "email": "loikfekkai@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "typescript",
+    "kumikojs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kumikojs/tooling.git",
+    "directory": "packages/eslint-config"
+  },
+  "homepage": "https://github.com/kumikojs/tooling/blob/main/packages/eslint-config/readme.md",
+  "bugs": {
+    "url": "https://github.com/kumikojs/tooling/issues"
+  },
+  "exports": {
+    ".": "./src/base.js",
+    "./base": "./src/base.js",
+    "./typescript": "./src/typescript.js",
+    "./react": "./src/react.js",
+    "./node": "./src/node.js",
+    "./next": "./src/next.js",
+    "./prettier": "./src/prettier.js"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.15.0",
+    "typescript": ">=5.7.2"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.15.0",
+    "@typescript-eslint/parser": "^8.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
