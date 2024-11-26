@@ -18,7 +18,7 @@
     "url": "https://github.com/kumikojs/tooling.git",
     "directory": "packages/tsconfig"
   },
-  "homepage": "https://github.com/kumikojs/tooling/blob/main/packages/tsconfig/readme.md",
+  "homepage": "https://github.com/kumikojs/tooling/blob/main/packages/tsconfig/README.md",
   "bugs": {
     "url": "https://github.com/kumikojs/tooling/issues"
   },
